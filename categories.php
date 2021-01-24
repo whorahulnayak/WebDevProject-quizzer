@@ -59,7 +59,7 @@ session_start();
     <a class="nav-item nav-link active" href="#">Categories</a>
     <a class="nav-item nav-link active" href="#">Leaderboard</a>
     <a class="nav-item nav-link active" href="#">Rules</a>
-    <a class="nav-item nav-link active" href="#">About Us</a>
+    <a class="nav-item nav-link active" href="aboutUS.html">About Us</a>
   </div>
   <div class="navbar-nav ml-auto">
   <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
