@@ -1,3 +1,13 @@
+<?php 
+session_start();
+//website logs in only ig user us in session 
+	include("connection.php");
+	include("functions.php");
+
+	$user_data = check_login($con);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,7 +23,7 @@
         <link rel="stylesheet" href="hamburgers.css">
     <link rel="stylesheet" href="categories.css">
 
-    <title>Regular Scroll</title>
+    <title>Quizzer</title>
 </head>
 
 
@@ -22,14 +32,14 @@
 <nav class="navbar navbar-expand-lg navbar-dark navcolor fixed-top py-0 py-md-1 py-lg-2">
   
   <!-- Title and Logo -->
-  <a class="navbar-brand " href="#">
-    <img src="/navbarimages/atom.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    
+  <a class="navbar-brand" href="#">
+    <img src="img/atom.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+    <span id="brand">Quizzer</span>   
   </a>
 
-  <a class="navbar-brand d-none d-lg-block" href="#">
+  <!-- <a class="navbar-brand d-none d-lg-block" href="#">
     Quizzer
-  </a>
+  </a> -->
 
 <a class="navbar-brand d-block d-sm-block d-md-block d-lg-none fixed-top mx-auto py-3 w-50" href="#">
     Categories
@@ -61,7 +71,13 @@
 </nav>
 <!-- End of Nav Bar -->
 
-
+<!-- start of jumbotron -->
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-4">Hello, <?php echo $user_data['user_name']; ?></h1>
+    <p class="lead">Welcome to <strong>Quizzer</strong> , a gamified quiz web app .</p>
+  </div>
+</div>
 <!-- Categories Tile -->
 <div class="title">
   <p>Categories</p>
@@ -255,55 +271,56 @@
 
 
 
-<script>
-  // Look for .hamburger
-  var hamburger = document.querySelector(".hamburger");
-  // On click
-  hamburger.addEventListener("click", function() {
-    // Toggle class "is-active"
-    hamburger.classList.toggle("is-active");
-    // Do something else, like open/close menu
+   <script>
+    // Look for .hamburger
+    var hamburger = document.querySelector(".hamburger");
+    // On click
+    hamburger.addEventListener("click", function() {
+      // Toggle class "is-active"
+      hamburger.classList.toggle("is-active");
+      // Do something else, like open/close menu
+    });
+    var svg = document.querySelector('.navbar-brand');
+    var brand = document.querySelector('#brand');
+   
+    console.log(scroll);
+    var scr = window.addEventListener("scroll",function(){
+      var scroll = window.scrollY;
+      if(scroll!=0)
+      {
+          brand.classList.add('disappear');
+      }
+      else
+      {
+       
+        brand.classList.remove('disappear');
+      }
+    });
+    $(window).scroll(function() {
+    var scrollTop = $(this).scrollTop();
+    $('#brand').css({
+      opacity: function() {
+        var elementHeight = $(this).height();
+        return 1 - (elementHeight - scrollTop) / elementHeight;
+        // adding transition here
+        
+      }
+    });
   });
-  var svg = document.querySelector('.navbar-brand');
-  var brand = document.querySelector('#brand');
- 
-  console.log(scroll);
-  var scr = window.addEventListener("scroll",function(){
-    var scroll = window.scrollY;
-    if(scroll!=0)
-    {
-        brand.classList.add('disappear');
-    }
-    else
-    {
-     
-      brand.classList.remove('disappear');
-    }
-  });
-  $(window).scroll(function() {
-  var scrollTop = $(this).scrollTop();
-  $('#brand').css({
-    opacity: function() {
-      var elementHeight = $(this).height();
-      return 1 - (elementHeight - scrollTop) / elementHeight;
-      // adding transition here
-      
-    }
-  });
-});
-</script>
-
-  <script script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-  crossorigin="anonymous"></script>
-<script script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-  crossorigin="anonymous"></script>
-<script script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-  crossorigin="anonymous"></script>
+   
+  </script>
   
-<!-- Smooth Scroll -->
-<script src="/index.js"></script>
-</body>
-</html>
+    <script script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+    
+  <!-- Smooth Scroll -->
+  <!-- <script src="/index.js"></script> -->
+  </body>
+  </html>
