@@ -264,6 +264,33 @@
     hamburger.classList.toggle("is-active");
     // Do something else, like open/close menu
   });
+  var svg = document.querySelector('.navbar-brand');
+  var brand = document.querySelector('#brand');
+ 
+  console.log(scroll);
+  var scr = window.addEventListener("scroll",function(){
+    var scroll = window.scrollY;
+    if(scroll!=0)
+    {
+        brand.classList.add('disappear');
+    }
+    else
+    {
+     
+      brand.classList.remove('disappear');
+    }
+  });
+  $(window).scroll(function() {
+  var scrollTop = $(this).scrollTop();
+  $('#brand').css({
+    opacity: function() {
+      var elementHeight = $(this).height();
+      return 1 - (elementHeight - scrollTop) / elementHeight;
+      // adding transition here
+      
+    }
+  });
+});
 </script>
 
   <script script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
