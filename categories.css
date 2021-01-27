@@ -11,7 +11,7 @@ body {
 }
 
 .navcolor {
-	background-color: #262833;
+	background-color: #293042;
 	/* background-color: #26242e; */
 }
 /*  */
@@ -60,28 +60,28 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
-.education {
+.yellow {
 	--bg-color: #ffd861;
 	--bg-color-light: #ffeeba;
 	--text-color-hover: #4c5656;
 	--box-shadow-color: rgba(255, 215, 97, 0.48);
 }
 
-.credentialing {
+.green {
 	--bg-color: #b8f9d3;
 	--bg-color-light: #e2fced;
 	--text-color-hover: #4c5656;
 	--box-shadow-color: rgba(184, 249, 211, 0.48);
 }
 
-.wallet {
+.purple {
 	--bg-color: #ceb2fc;
 	--bg-color-light: #f0e7ff;
 	--text-color-hover: #fff;
 	--box-shadow-color: rgba(206, 178, 252, 0.48);
 }
 
-.human-resources {
+.blue {
 	--bg-color: #dce9ff;
 	--bg-color-light: #f1f7ff;
 	--text-color-hover: #4c5656;
@@ -169,8 +169,8 @@ body {
 	z-index: 100000;
 	transform: translateZ(0);
 }
-.disappear{
-	display:none;
+.disappear {
+	display: none;
 	transition: all 0.6s ease-in-out;
 }
 .overlay {

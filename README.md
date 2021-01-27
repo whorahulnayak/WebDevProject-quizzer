@@ -6,3 +6,7 @@ login sign up pages working along with the DB (tweak the sign up page bug pendin
 getting the quiz page 
 About Us page 
 connecting all the pieces together 
+
+
+#modifications
+quizzer logo on mobile device
