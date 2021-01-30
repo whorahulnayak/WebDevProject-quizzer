@@ -154,7 +154,7 @@ td {
 }
 
 .lboard {
-	background-color: #06d6a0;
+	background-color: #5055cb;
 }
 
 .circleout {
@@ -189,4 +189,8 @@ button {
 	cursor: pointer;
 	width: 100%;
 	font-size: 18px;
+}
+
+h2 {
+	color: #888dff;
 }
