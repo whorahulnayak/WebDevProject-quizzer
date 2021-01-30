@@ -11,7 +11,6 @@ session_start();
 		//collect usernmae and pw
 		$user_name = $_POST['user_name'];
 		$password = $_POST['password'];
-
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))//we dont want UN to be a No
 		{
 
