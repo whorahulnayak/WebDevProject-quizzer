@@ -21,8 +21,8 @@ session_start();
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="hamburgers.css" rel="stylesheet">
         <link rel="stylesheet" href="hamburgers.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="cat.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
 
     <title>Quizzer</title>
 </head>
@@ -54,7 +54,7 @@ session_start();
 <!-- Categories -->
 <div class="collapse navbar-collapse " id="expandme">
 
-  <div class="navbar-nav">
+<div class="navbar-nav">
     <a class="nav-item nav-link active" href="#">Home</a>
     <a class="nav-item nav-link active" href="#">Categories</a>
     <a class="nav-item nav-link active" href="#">Leaderboard</a>
@@ -64,7 +64,6 @@ session_start();
   <div class="navbar-nav ml-auto">
   <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
   </div>
-
 
 <!-- Search -->
 <!-- <form class="form-inline ml-auto">
@@ -92,7 +91,7 @@ session_start();
 <div class="container-fluid row mx-auto justify-content-center text-center ">
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
         
-          <a href="#" class="cardn education">
+          <a href="#" class="cardn yellow">
                <div class="overlay"></div>
             <div class="circle">
                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M11.266 7l12.734-2.625-.008-.042-1.008-4.333-21.169 4.196c-1.054.209-1.815 1.134-1.815 2.207v14.597c0 1.657 1.343 3 3 3h18c1.657 0 3-1.343 3-3v-14h-12.734zm8.844-5.243l2.396 1.604-2.994.595-2.398-1.605 2.996-.594zm-5.898 1.169l2.4 1.606-2.994.595-2.401-1.607 2.995-.594zm-5.904 1.171l2.403 1.608-2.993.595-2.406-1.61 2.996-.593zm-2.555 5.903l2.039-2h3.054l-2.039 2h-3.054zm4.247 10v-7l6 3.414-6 3.586zm4.827-10h-3.054l2.039-2h3.054l-2.039 2zm6.012 0h-3.054l2.039-2h3.054l-2.039 2z"/></svg> -->
@@ -105,7 +104,7 @@ session_start();
       
       <!-- 2 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn credentialing">
+        <a href="#" class="cardn green">
              <div class="overlay"></div>
           <div class="circle">
           </div>
@@ -116,7 +115,7 @@ session_start();
       
       <!-- 3 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn wallet">
+        <a href="#" class="cardn purple">
              <div class="overlay"></div>
           <div class="circle">
           </div>
@@ -127,7 +126,7 @@ session_start();
       
       <!-- 4 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn human-resources">
+        <a href="#" class="cardn blue">
              <div class="overlay"></div>
           <div class="circle">
           </div>
@@ -137,138 +136,91 @@ session_start();
       </div>
      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
         
-          <a href="#" class="cardn education">
+          <a href="#" class="cardn yellow">
                <div class="overlay"></div>
             <div class="circle">
                <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M11.266 7l12.734-2.625-.008-.042-1.008-4.333-21.169 4.196c-1.054.209-1.815 1.134-1.815 2.207v14.597c0 1.657 1.343 3 3 3h18c1.657 0 3-1.343 3-3v-14h-12.734zm8.844-5.243l2.396 1.604-2.994.595-2.398-1.605 2.996-.594zm-5.898 1.169l2.4 1.606-2.994.595-2.401-1.607 2.995-.594zm-5.904 1.171l2.403 1.608-2.993.595-2.406-1.61 2.996-.593zm-2.555 5.903l2.039-2h3.054l-2.039 2h-3.054zm4.247 10v-7l6 3.414-6 3.586zm4.827-10h-3.054l2.039-2h3.054l-2.039 2zm6.012 0h-3.054l2.039-2h3.054l-2.039 2z"/></svg> -->
             </div>
           
-            <p>Technology</p>
+            <p>Data Structures</p>
           </a>
         
       </div>
       
       <!-- 2 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn credentialing">
+        <a href="#" class="cardn green">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
-          <p>Credentialinnnnng</p>
+          <p>Computer Networks</p>
         </a>
       </div>
       
       <!-- 3 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn wallet">
+        <a href="#" class="cardn purple">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
-          <p>Wallet</p>
+          <p>Java Programming</p>
         </a>
       </div>
       
       <!-- 4 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn human-resources">
+        <a href="#" class="cardn blue">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
-          <p>Human Resources</p>
+          <p>C Programming</p>
         </a>
-      </div>
-
-      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
+      </div><div class="col-sm-6 col-lg-4 col-xl-3 parent2">
         
-          <a href="#" class="cardn education">
+          <a href="#" class="cardn yellow">
                <div class="overlay"></div>
             <div class="circle">
-               <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M11.266 7l12.734-2.625-.008-.042-1.008-4.333-21.169 4.196c-1.054.209-1.815 1.134-1.815 2.207v14.597c0 1.657 1.343 3 3 3h18c1.657 0 3-1.343 3-3v-14h-12.734zm8.844-5.243l2.396 1.604-2.994.595-2.398-1.605 2.996-.594zm-5.898 1.169l2.4 1.606-2.994.595-2.401-1.607 2.995-.594zm-5.904 1.171l2.403 1.608-2.993.595-2.406-1.61 2.996-.593zm-2.555 5.903l2.039-2h3.054l-2.039 2h-3.054zm4.247 10v-7l6 3.414-6 3.586zm4.827-10h-3.054l2.039-2h3.054l-2.039 2zm6.012 0h-3.054l2.039-2h3.054l-2.039 2z"/></svg> -->
+              
             </div>
           
-            <p>Movies</p>
+            <p>Unlocks at Level 10</p>
           </a>
         
       </div>
       
       <!-- 2 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn credentialing">
+        <a href="#" class="cardn green">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
-          <p>Sports</p>
+          <p>Unlocks at Level 10</p>
         </a>
       </div>
       
       <!-- 3 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn wallet">
+        <a href="#" class="cardn purple">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
-          <p>TV Shows</p>
+          <p>Unlocks at Level 10</p>
         </a>
       </div>
       
       <!-- 4 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn human-resources">
+        <a href="#" class="cardn blue">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
-          <p>Science</p>
-        </a>
-      </div>
-     <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        
-          <a href="#" class="cardn education">
-               <div class="overlay"></div>
-            <div class="circle">
-               <!-- <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M11.266 7l12.734-2.625-.008-.042-1.008-4.333-21.169 4.196c-1.054.209-1.815 1.134-1.815 2.207v14.597c0 1.657 1.343 3 3 3h18c1.657 0 3-1.343 3-3v-14h-12.734zm8.844-5.243l2.396 1.604-2.994.595-2.398-1.605 2.996-.594zm-5.898 1.169l2.4 1.606-2.994.595-2.401-1.607 2.995-.594zm-5.904 1.171l2.403 1.608-2.993.595-2.406-1.61 2.996-.593zm-2.555 5.903l2.039-2h3.054l-2.039 2h-3.054zm4.247 10v-7l6 3.414-6 3.586zm4.827-10h-3.054l2.039-2h3.054l-2.039 2zm6.012 0h-3.054l2.039-2h3.054l-2.039 2z"/></svg> -->
-            </div>
-          
-            <p>Technology</p>
-          </a>
-        
-      </div>
-      
-      <!-- 2 -->
-      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn credentialing">
-             <div class="overlay"></div>
-          <div class="circle">
-          </div>
-        
-          <p>Credentialinnnnng</p>
-        </a>
-      </div>
-      
-      <!-- 3 -->
-      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn wallet">
-             <div class="overlay"></div>
-          <div class="circle">
-          </div>
-        
-          <p>Wallet</p>
-        </a>
-      </div>
-      
-      <!-- 4 -->
-      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn human-resources">
-             <div class="overlay"></div>
-          <div class="circle">
-          </div>
-        
-          <p>Human Resources</p>
+          <p>Unlocks at Level 10</p>
         </a>
       </div>
    </div>
@@ -314,7 +266,7 @@ session_start();
   });
    
   </script>
-
+  
     <script script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -329,3 +281,5 @@ session_start();
   <!-- <script src="/index.js"></script> -->
   </body>
   </html>
+
+  <!-- Rahul bsdk -->
