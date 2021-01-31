@@ -20,7 +20,7 @@
     choices: ['Titanium','Vibranium','Adamantium','Cadmium','Osmium'],
     correctAnswer: 2
   }];
-  
+  // quiz4
   var questionCounter = 0; //Tracks question number
   var selections = []; //Array containing user choices
   var quiz = $('#quiz'); //Quiz div object

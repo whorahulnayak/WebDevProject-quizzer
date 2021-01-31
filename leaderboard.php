@@ -19,7 +19,7 @@ session_start();
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="hamburgers.css">
     <link rel="stylesheet" href="leaderboard.css">
 
@@ -57,7 +57,9 @@ session_start();
                 <a class="nav-item nav-link" href="rules.html">Rules</a>
                 <a class="nav-item nav-link" href="aboutUS.html">About Us</a>
             </div>
-
+            <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </div>
 
 
         </div>
@@ -115,7 +117,7 @@ session_start();
                         <tr>
                             <th>Ranking</th>
                             <th>Name</th>
-                            <th>Position</th>
+                            <th>Total Points</th>
                         </tr>
                     </thead>
                     <tr>
@@ -125,8 +127,8 @@ session_start();
                     
                         /* Mysqli query to fetch rows  
                         in descending order of marks */
-                        $result = mysqli_query($con, "SELECT user_name,  
-                        cat1_score FROM users ORDER BY cat1_score DESC"); 
+                        $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,cat4_score,  
+                            tot_score FROM users ORDER BY tot_score DESC");
                         
                         /* First rank will be 1 and  
                             second be 2 and so on */
@@ -135,13 +137,25 @@ session_start();
                         /* Fetch Rows from the SQL query */
                         if (mysqli_num_rows($result)) { 
                             while ($row = mysqli_fetch_array($result)) { 
-                                echo "<tr>
-                                <td>{$ranking}</td> 
-                                <td>{$row['user_name']}</td> 
-                                <td>{$row['cat1_score']}</td> <br> </tr>"; 
-                                $ranking++; 
+                                $row['tot_score'] = $row['cat1_score'] + $row['cat2_score'] + $row['cat3_score'] +$row['cat4_score'] ;
+                                $name = $row['user_name'];
+                                $score = $row['tot_score'];
+                                $query1 = "UPDATE users SET tot_score = '$score' where user_name = '$name'";
+                                mysqli_query($con, $query1);
+                               
                             } 
                     } 
+                    $result = mysqli_query($con, "SELECT user_name,tot_score FROM users ORDER BY tot_score DESC"); 
+                    if (mysqli_num_rows($result)) { 
+                        while ($row = mysqli_fetch_array($result)) { 
+                           
+                            echo "<tr>
+                            <td>{$ranking}</td> 
+                            <td>{$row['user_name']}</td> 
+                            <td>{$row['tot_score']}</td> <br> </tr>"; 
+                            $ranking++; 
+                        } 
+                } 
                     ?>
                         <!-- <td>Username</td>
                         <td>1</td> -->
@@ -154,31 +168,6 @@ session_start();
         </div>
 
     </div>
-    <?php 
-    $con = mysqli_connect("localhost",  
-        "root", "", "login_sample_db"); 
-  
-    /* Mysqli query to fetch rows  
-    in descending order of marks */
-    $result = mysqli_query($con, "SELECT user_name,  
-    cat1_score FROM users ORDER BY cat1_score DESC"); 
-    
-    /* First rank will be 1 and  
-        second be 2 and so on */
-    $ranking = 1; 
-    
-    /* Fetch Rows from the SQL query */
-    if (mysqli_num_rows($result)) { 
-        while ($row = mysqli_fetch_array($result)) { 
-            echo "<td>{$ranking}</td> 
-            <td>{$row['user_name']}</td> 
-            <td>{$row['cat1_score']}</td> <br>"; 
-            $ranking++; 
-        } 
-} 
-?>
-
-
 
     <script>
         // Look for .hamburger
