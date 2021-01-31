@@ -14,7 +14,7 @@
   }, {
     question: "What is the maximum number of children that a binary tree node can have",
     choices: [0, 1, 2, 3, 4],
-    correctAnswer: 1
+    correctAnswer: 2
   }, {
     question: " In a binary search tree, which of the following traversals would print the numbers in the ascending order?",
     choices: ['Level Order Traversal','Post order Traversal','Inorder Traversal','Pre order Traversal','Non Linear Traversal'],
