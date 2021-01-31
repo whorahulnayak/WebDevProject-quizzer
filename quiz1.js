@@ -1,23 +1,23 @@
 (function() {
   var questions = [{
-    question: "What is 2*5?",
-    choices: [2, 5, 10, 15, 20],
-    correctAnswer: 2
-  }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 4
-  }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
-    correctAnswer: 0
-  }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
+    question: "Rahul rolls a die. What is the probability of a face with less than 5 turns up?",
+    choices: ['5/6','33%','80%','4/6','1/2'],
     correctAnswer: 3
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
+    question: "Gururaj drew one card from a deck of cards. What is the probability that he drew a king? ",
+    choices: ['1/14','55%','2/24','4/52','6/9'],
+    correctAnswer: 3
+  }, {
+    question: "Let X ∼ N(3,22). What does this tell us about the distribution of X?",
+    choices: ['X is binomial with n = 3 and p = 2.','X is normal with mean 3 and variance 4.','X is normal with mean 3 and variance 2.','X is binomial with mean 2 and variance 9.','X is binomial with mean 9 and variance 2.'],
+    correctAnswer: 1
+  }, {
+    question: "X is a random normal variable, with mean μ and variance σ2. The “standardised form” of X is Z = X−μ σ . What are the mean and variance, respectively, of Z ?",
+    choices: ['0,1','2,1','1,0','2,0','6/9'],
+    correctAnswer: 0
+  }, {
+    question: "Nidhi has a bag filled with 4 caramels, two chocolates and three jellies. She put her hand in the bag and took out one sweet. What is the probability of getting a jelly?",
+    choices: ['3/6','30%','66.6%','2/5','3/9'],
     correctAnswer: 4
   }];
   
