@@ -31,94 +31,106 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link href="hamburgers.css" rel="stylesheet">
-		<link rel="stylesheet" href="hamburgers.css">
-		<link rel="stylesheet" href="categories.css">
-    	<link rel="stylesheet" href="quiz.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link href="hamburgers.css" rel="stylesheet">
+    <link rel="stylesheet" href="hamburgers.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
 
     <title>Mathematics Quiz</title>
 </head>
 
 
 <body id="my-scrollbar">
-  <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg navbar-dark navcolor fixed-top py-0 py-md-1 py-lg-2">
-  
-  <!-- Title and Logo -->
-  <a class="navbar-brand" href="#">
-    <img src="img/atom.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-    <span id="brand">Quizzer</span>   
-  </a>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-dark navcolor fixed-top py-0 py-md-1 py-lg-2">
 
-  <!-- <a class="navbar-brand d-none d-lg-block" href="#">
-    Quizzer
-  </a> -->
+        <!-- Title and Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="img/atom.svg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+            <span id="brand">Quizzer</span>
+        </a>
 
-<a class="navbar-brand d-block d-sm-block d-md-block d-lg-none fixed-top mx-auto py-3 w-50" href="#">
-    Categories
-  </a>
+        <a class="navbar-brand d-block d-sm-block d-md-block d-lg-none fixed-top mx-auto py-3 w-50" href="#">
+            QUIZ 1
+        </a>
 
-<button class="hamburger hamburger--emphatic is-valid navbar-toggler " type="button" data-toggle="collapse" data-target="#expandme">
-  <span class="hamburger-box">
-    <span class="hamburger-inner"></span>
-  </span>
-</button>
-<!-- Categories -->
-<div class="collapse navbar-collapse " id="expandme">
+        <button class="hamburger hamburger--emphatic is-valid navbar-toggler " type="button" data-toggle="collapse"
+            data-target="#expandme">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        <!-- Categories -->
+        <div class="collapse navbar-collapse " id="expandme">
 
-<div class="navbar-nav">
-    <a class="nav-item nav-link active" href="category.php">Home</a>
-    <a class="nav-item nav-link active" href="category.php">Categories</a>
-    <a class="nav-item nav-link active" href="leaderboard.php">Leaderboard</a>
-    <a class="nav-item nav-link active" href="rules.html">Rules</a>
-    <a class="nav-item nav-link active" href="aboutUS.html">About Us</a>
-  </div>
-  <div class="navbar-nav ml-auto">
-  <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
-  </div>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="category.php">Home</a>
 
-<!-- Search -->
-<!-- <form class="form-inline ml-auto">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-  <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-</form> -->
+                <a class="nav-item nav-link active" href="leaderboard.php">Leaderboard</a>
+                <a class="nav-item nav-link active" href="rules.html">Rules</a>
+                <a class="nav-item nav-link active" href="aboutUS.html">About Us</a>
+            </div>
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link active " href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Logout</a>
+            </div>
 
-</div>
-</nav>
-<!-- End of Nav Bar -->
 
-		<div id='container'>
-			<div id='title'>
-				<h1>Let's Get Quizzing</h1>
-			</div>
-   			<br/>
-              <div id='quiz'></div>
-    		<div class='button' id='next'><a href='#'>Next</a></div>
-    		<div class='button' id='prev'><a href='#'>Prev</a></div>
-    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
-    		<!-- <button class='' id='next'>Next</a></button>
-    		<button class='' id='prev'>Prev</a></button>
-    		<button class='' id='start'> Start Over</a></button> -->
-			<form action="" method="post">
-			
-				<input type="text" name="q1_score" id="">
-				<input type="submit" value="submit">
-			</form>
-    	</div>
+        </div>
+    </nav>
+    <!-- End of Nav Bar -->
 
-		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-        <!-- <script type="text/javascript" src='questions.json'></script> -->
-        <script type='text/javascript' src="cat1.js"></script>
-         
-	</body>
+    <div id='container' class="container-fluid row mx-auto justify-content-center">
+        <div class="col-sm-11 col-md-10 col-lg-6">
+            <div id='title'>
+                <h1>Let's Get YOOOO Quizzing</h1>
+            </div>
+            <br />
+            <div id='quiz'></div>
+            <div class='button' id='next'><a href='#'>Next</a></div>
+            <div class='button' id='prev'><a href='#'>Prev</a></div>
+            <div class='button' id='start'> <a href='#'>Start Over</a> </div>
+            <!-- <button class='' id='next'>Next</a></button>
+			utton class='' id='prev'>Prev</a></button>
+			utton class='' id='start'> Start Over</a></button> -->
+            <form action="" method="post">
+
+                <input type="text" name="q1_score" id="">
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'>
+    </script>
+    <!-- <script type="text/javascript" src='questions.json'></script> -->
+    <script type='text/javascript' src="cat1.js"></script>
+
+
+
+    <script script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+</body>
+
 </html>
