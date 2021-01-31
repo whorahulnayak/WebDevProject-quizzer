@@ -1,24 +1,24 @@
 (function() {
   var questions = [{
-    question: "What is 2*5?",
-    choices: [2, 5, 10, 15, 20],
+    question: "What movie won the first Oscar for the new category of Best Animated Feature Film?",
+    choices: ['The Incredibles (2004)','WALL-E (2008)','Shrek (2001)','Toy Story (1995)','Ice Age (2002)'],
     correctAnswer: 2
   }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 4
-  }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
-    correctAnswer: 0
-  }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
+    question: "For which of these movies did Leonardo DiCaprio win an Oscar for Best Actor?",
+    choices: ['Titanic','Inception','The Wolf of Wall Street','The Revenant','Blood Diamond'],
     correctAnswer: 3
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
+    question: "Who perfroms the most on-screen kills in the Lord of The Rings movies?",
+    choices: ['Gimli','Legolas','Boromir','Frodo','Aragorn'],
+    correctAnswer: 1
+  }, {
+    question: "How many Oscars did the 1994 movie Forrest Gump win?",
+    choices: [2, 4, 3, 9, 6],
     correctAnswer: 4
+  }, {
+    question: "What are the claws of Wolverine made of?" ,
+    choices: ['Titanium','Vibranium','Adamantium','Cadmium','Osmium'],
+    correctAnswer: 2
   }];
   
   var questionCounter = 0; //Tracks question number
