@@ -50,7 +50,7 @@ session_start();
     		<button class='' id='prev'>Prev</a></button>
     		<button class='' id='start'> Start Over</a></button> -->
 			<form action="" method="post">
-			<?php echo $user_data['user_name']?>
+			
 				<input type="text" name="q1_score" id="">
 				<input type="submit" value="submit">
 			</form>
