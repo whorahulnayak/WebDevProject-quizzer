@@ -125,8 +125,8 @@ session_start();
                     
                         /* Mysqli query to fetch rows  
                         in descending order of marks */
-                        $result = mysqli_query($con, "SELECT user_name,  
-                        cat1_score FROM users ORDER BY cat1_score DESC"); 
+                        $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,  
+                            tot_score FROM users ORDER BY tot_score DESC");
                         
                         /* First rank will be 1 and  
                             second be 2 and so on */
@@ -135,13 +135,26 @@ session_start();
                         /* Fetch Rows from the SQL query */
                         if (mysqli_num_rows($result)) { 
                             while ($row = mysqli_fetch_array($result)) { 
-                                echo "<tr>
-                                <td>{$ranking}</td> 
-                                <td>{$row['user_name']}</td> 
-                                <td>{$row['cat1_score']}</td> <br> </tr>"; 
-                                $ranking++; 
+                                $row['tot_score'] = $row['cat1_score'] + $row['cat2_score'] + $row['cat3_score'] ;
+                                $name = $row['user_name'];
+                                $score = $row['tot_score'];
+                                $query1 = "UPDATE users SET tot_score = '$score' where user_name = '$name'";
+                                mysqli_query($con, $query1);
+                               
                             } 
                     } 
+                    $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,  
+                    tot_score FROM users ORDER BY tot_score DESC"); 
+                    if (mysqli_num_rows($result)) { 
+                        while ($row = mysqli_fetch_array($result)) { 
+                           
+                            echo "<tr>
+                            <td>{$ranking}</td> 
+                            <td>{$row['user_name']}</td> 
+                            <td>{$row['tot_score']}</td> <br> </tr>"; 
+                            $ranking++; 
+                        } 
+                } 
                     ?>
                         <!-- <td>Username</td>
                         <td>1</td> -->
