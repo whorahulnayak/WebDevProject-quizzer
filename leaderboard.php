@@ -9,6 +9,7 @@ session_start();
 
 ?>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,9 @@ session_start();
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" />
     <link rel="stylesheet" href="hamburgers.css">
     <link rel="stylesheet" href="leaderboard.css">
 
@@ -39,7 +42,7 @@ session_start();
 
 
         <a class="navbar-brand d-block d-sm-block d-md-block d-lg-none fixed-top mx-auto py-3 w-50" href="#">
-            Leaderboard
+            Progress
         </a>
 
         <button class="hamburger hamburger--emphatic is-valid navbar-toggler " type="button" data-toggle="collapse"
@@ -58,9 +61,10 @@ session_start();
                 <a class="nav-item nav-link" href="aboutUS.html">About Us</a>
             </div>
             <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                <a class="nav-item nav-link active " href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                    Logout</a>
             </div>
-<!-- check code -->
+            <!-- check code -->
 
         </div>
     </nav>
@@ -68,59 +72,27 @@ session_start();
 
     <!-- Categories Tile -->
     <div class="title">
-        <p>Your Progress</p>
+        <p>Your Progress <img src="img/trophy-award-svgrepo-com.svg" class="class-svg" alt=""></p>
     </div>
 
     <!-- Cards -->
-    <div class="container-fluid row mx-auto justify-content-center text-center ">
-        <div class="col-sm-6 col-md-3 parent2">
-        <div class="cardn">
-            <div class="circleout">
-                <div class="circle"></div>
-            </div>
 
-
-            <h1>Steve Jobs</h1>
-            <p class="profile">CEO & Founder, Example</p>
-            <p>Harvard University</p>
-
-            <p><button>Contact</button></p>
-
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-3 parent2">
-        <div class="cardn">
-            <div class="circleout">
-                <div class="circle"></div>
-            </div>
-
-
-            <h1>Steve Jobs</h1>
-            <p class="profile">CEO & Founder, Example</p>
-            <p>Harvard University</p>
-
-            <p><button>Contact</button></p>
-        </div>
-
-       
-    </div>
-        <div class="col-sm-12 col-md-6 parent2">
-            <div class="cardn lboard">
-                <nav class='ladder-nav'>
-                    <div class="ladder-title">
-                        <h3>Leaderboard</h3>
-                    </div>
-                </nav>
-                <table id="rankings" class="leaderboard-results" width="100%">
-                    <thead>
-                        <tr>
-                            <th>Ranking</th>
-                            <th>Name</th>
-                            <th>Total Points</th>
-                        </tr>
-                    </thead>
+    <div class="col-sm-8 container-fluid row mx-auto justify-content-center text-center parent2">
+        <div class="cardn lboard">
+            <nav class='ladder-nav'>
+                <div class="ladder-title">
+                    <h3>Leaderboard</h3>
+                </div>
+            </nav>
+            <table id="rankings" class="leaderboard-results" width="100%">
+                <thead>
                     <tr>
+                        <th>Ranking</th>
+                        <th>Name</th>
+                        <th>Total Points</th>
+                    </tr>
+                </thead>
+                <tr>
                     <?php 
                         $con = mysqli_connect("localhost",  
                             "root", "", "login_sample_db"); 
@@ -157,64 +129,62 @@ session_start();
                         } 
                 } 
                     ?>
-                        <!-- <td>Username</td>
+                    <!-- <td>Username</td>
                         <td>1</td> -->
-                    </tr>
-                    
-                </table>
+                </tr>
+
+            </table>
 
 
-            </div>
         </div>
-
     </div>
 
+
+
     <script>
-        // Look for .hamburger
-        var hamburger = document.querySelector(".hamburger");
-        // On click
-        hamburger.addEventListener("click", function () {
-            // Toggle class "is-active"
-            hamburger.classList.toggle("is-active");
-            // Do something else, like open/close menu
-        });
-        var svg = document.querySelector('.navbar-brand');
-        var brand = document.querySelector('#brand');
+    // Look for .hamburger
+    var hamburger = document.querySelector(".hamburger");
+    // On click
+    hamburger.addEventListener("click", function() {
+        // Toggle class "is-active"
+        hamburger.classList.toggle("is-active");
+        // Do something else, like open/close menu
+    });
+    var svg = document.querySelector('.navbar-brand');
+    var brand = document.querySelector('#brand');
 
-        console.log(scroll);
-        var scr = window.addEventListener("scroll", function () {
-            var scroll = window.scrollY;
-            if (scroll != 0) {
-                brand.classList.add('disappear');
+    console.log(scroll);
+    var scr = window.addEventListener("scroll", function() {
+        var scroll = window.scrollY;
+        if (scroll != 0) {
+            brand.classList.add('disappear');
+        } else {
+
+            brand.classList.remove('disappear');
+        }
+    });
+    $(window).scroll(function() {
+        var scrollTop = $(this).scrollTop();
+        $('#brand').css({
+            opacity: function() {
+                var elementHeight = $(this).height();
+                return 1 - (elementHeight - scrollTop) / elementHeight;
+                // adding transition here
+
             }
-            else {
-
-                brand.classList.remove('disappear');
-            }
         });
-        $(window).scroll(function () {
-            var scrollTop = $(this).scrollTop();
-            $('#brand').css({
-                opacity: function () {
-                    var elementHeight = $(this).height();
-                    return 1 - (elementHeight - scrollTop) / elementHeight;
-                    // adding transition here
-
-                }
-            });
-        });
-
+    });
     </script>
 
     <script script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
     <script script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
     <script script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
 
     <!-- Smooth Scroll -->
     <!-- <script src="/index.js"></script> -->
