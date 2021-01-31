@@ -166,31 +166,6 @@ session_start();
         </div>
 
     </div>
-    <?php 
-    $con = mysqli_connect("localhost",  
-        "root", "", "login_sample_db"); 
-  
-    /* Mysqli query to fetch rows  
-    in descending order of marks */
-    $result = mysqli_query($con, "SELECT user_name,  
-    cat1_score FROM users ORDER BY cat1_score DESC"); 
-    
-    /* First rank will be 1 and  
-        second be 2 and so on */
-    $ranking = 1; 
-    
-    /* Fetch Rows from the SQL query */
-    if (mysqli_num_rows($result)) { 
-        while ($row = mysqli_fetch_array($result)) { 
-            echo "<td>{$ranking}</td> 
-            <td>{$row['user_name']}</td> 
-            <td>{$row['cat1_score']}</td> <br>"; 
-            $ranking++; 
-        } 
-} 
-?>
-
-
 
     <script>
         // Look for .hamburger
