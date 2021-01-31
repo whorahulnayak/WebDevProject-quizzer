@@ -9,7 +9,7 @@ session_start();
 	{
 		//something was posted
 		//collect score from user
-		$score = $_POST['q1_score'];
+		$score = $_POST['q4_score'];
 		$username = $user_data['user_name'];
 		if(!empty($score))//we dont want UN to be a No
 		{
@@ -17,7 +17,7 @@ session_start();
 			//save to database 
 			echo $score;
 			echo $username;
-			$query1 = "UPDATE  users SET cat1_score = '$score'  WHERE user_name = '$username'";
+			$query1 = "UPDATE  users SET cat4_score = '$score'  WHERE user_name = '$username'";
 			//$query = "UPDATE users SET cat1_score = '$score' WHERE user_name = '$username'";
 			mysqli_query($con, $query1);
 
@@ -51,14 +51,14 @@ session_start();
     		<button class='' id='start'> Start Over</a></button> -->
 			<form action="" method="post">
 			<?php echo $user_data['user_name']?>
-				<input type="text" name="q1_score" id="">
+				<input type="text" name="q4_score" id="">
 				<input type="submit" value="submit">
 			</form>
     	</div>
 
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
         <script type="text/javascript" src='questions.json'></script>
-        <script type='text/javascript' src="quiz1.js"></script>
+        <script type='text/javascript' src="cat4.js"></script>
          
 	</body>
 </html>
