@@ -103,7 +103,7 @@ session_start();
 			</div>
    			<br/>
               <div id='quiz'></div>
-    		<div class='button' id='next'><a href='#'>Next</a></div>
+    		<div class='btn btn-alert' id='next'><a href='#'>Next</a></div>
     		<div class='button' id='prev'><a href='#'>Prev</a></div>
     		<div class='button' id='start'> <a href='#'>Start Over</a></div>
     		<!-- <button class='' id='next'>Next</a></button>

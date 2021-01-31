@@ -117,7 +117,7 @@ session_start();
                         <tr>
                             <th>Ranking</th>
                             <th>Name</th>
-                            <th>Position</th>
+                            <th>Total Points</th>
                         </tr>
                     </thead>
                     <tr>
