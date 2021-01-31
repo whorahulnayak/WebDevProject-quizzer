@@ -130,7 +130,7 @@ session_start();
 
                         // $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,  
                         // tot_score FROM users ORDER BY tot_score DESC"); 
-                          $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,  
+                          $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,cat4_score, 
                             tot_score FROM users ORDER BY tot_score DESC"); 
                         /* First rank will be 1 and  
                             second be 2 and so on */
@@ -139,7 +139,7 @@ session_start();
                         /* Fetch Rows from the SQL query */
                         if (mysqli_num_rows($result)) { 
                             while ($row = mysqli_fetch_array($result)) { 
-                                $row['tot_score'] = $row['cat1_score'] + $row['cat2_score'] + $row['cat3_score'] ;
+                                $row['tot_score'] = $row['cat1_score'] + $row['cat2_score'] + $row['cat3_score'] + $row['cat4_score'];
                                 $name = $row['user_name'];
                                 $score = $row['tot_score'];
                                 $query1 = "UPDATE users SET tot_score = '$score' where user_name = '$name'";
@@ -147,8 +147,7 @@ session_start();
                                
                             } 
                     } 
-                    $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,  
-                    tot_score FROM users ORDER BY tot_score DESC"); 
+                    $result = mysqli_query($con, "SELECT user_name,tot_score FROM users ORDER BY tot_score DESC"); 
                     if (mysqli_num_rows($result)) { 
                         while ($row = mysqli_fetch_array($result)) { 
                            
