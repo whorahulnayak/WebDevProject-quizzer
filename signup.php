@@ -66,8 +66,7 @@ session_start();
           <div class="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+             Join our community , where u will meet geeks as well as curiously smart people
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up
@@ -79,8 +78,7 @@ session_start();
           <div class="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+             Hop in member, we missed you
             </p>
 			<form  method = "post">
             <a class="btn transparent sign" id="sign-in-btn" href="login.php">Login</a><br><br>
