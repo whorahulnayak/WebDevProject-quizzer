@@ -1,24 +1,24 @@
 (function() {
   var questions = [{
-    question: "What is 2*5?",
-    choices: [2, 5, 10, 15, 20],
-    correctAnswer: 2
-  }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
-    correctAnswer: 4
-  }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
-    correctAnswer: 0
-  }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
+    question: "What kind of linked list is best to answer questions like 'What is the item at position n?'",
+    choices: ['Singly linked list','Doubly linked list',' Circular linked list','Array implementation of linked list','circular doubly linked list'],
     correctAnswer: 3
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
-    correctAnswer: 4
+    question: " Linked list is considered as an example of ___________ type of memory allocation",
+    choices: ['Dynamic','Static','Compile time','Heap','Random'],
+    correctAnswer: 0
+  }, {
+    question: " In Singly Linked List implementation, a node carries information regarding ___________",
+    choices: ['Data','Link','Data & Link','Node','Prev Node'],
+    correctAnswer: 2
+  }, {
+    question: "What is the maximum number of children that a binary tree node can have",
+    choices: [0, 1, 2, 3, 4],
+    correctAnswer: 1
+  }, {
+    question: " In a binary search tree, which of the following traversals would print the numbers in the ascending order?",
+    choices: ['Level Order Traversal','Post order Traversal','Inorder Traversal','Pre order Traversal','Non Linear Traversal'],
+    correctAnswer: 2
   }];
   
   var questionCounter = 0; //Tracks question number

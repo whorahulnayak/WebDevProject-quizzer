@@ -104,23 +104,23 @@ session_start();
       
       <!-- 2 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn green">
-             <div class="overlay"></div>
-          <div class="circle">
-          </div>
-        
-          <p>Sports</p>
-        </a>
-      </div>
-      
-      <!-- 3 -->
-      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn purple">
+        <a href="quiz2.php" class="cardn green">
              <div class="overlay"></div>
           <div class="circle">
           </div>
         
           <p>Data structures</p>
+        </a>
+      </div>
+      
+      <!-- 3 -->
+      <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
+        <a href="quiz3.php" class="cardn purple">
+             <div class="overlay"></div>
+          <div class="circle">
+          </div>
+        
+          <p>Sports</p>
         </a>
       </div>
       
