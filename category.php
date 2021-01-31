@@ -126,7 +126,7 @@ session_start();
       
       <!-- 4 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="quiz4.php" class="cardn blue">
+        <a href="#" class="cardn blue">
              <div class="overlay"></div>
           <div class="circle">
           </div>
