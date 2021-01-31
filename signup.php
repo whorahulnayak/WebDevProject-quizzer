@@ -30,43 +30,6 @@ session_start();
 ?>
 
 
-<!-- <!DOCTYPE html>
-<html>
-<head>
-	<title>Signup</title>
-</head>
-<body>
-
-	<style type="text/css">
-	
-	#text{
-
-		height: 25px;
-		border-radius: 5px;
-		padding: 4px;
-		border: solid thin #aaa;
-		width: 100%;
-	}
-
-	#button{
-
-		padding: 10px;
-		width: 100px;
-		color: white;
-		background-color: lightblue;
-		border: none;
-	}
-
-	#box{
-
-		background-color: grey;
-		margin: auto;
-		width: 300px;
-		padding: 20px;
-	}
-
-	</style> -->
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -103,8 +66,7 @@ session_start();
           <div class="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+             Join our community , where u will meet geeks as well as curiously smart people
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up
@@ -116,8 +78,7 @@ session_start();
           <div class="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+             Hop in member, we missed you
             </p>
 			<form  method = "post">
             <a class="btn transparent sign" id="sign-in-btn" href="login.php">Login</a><br><br>
