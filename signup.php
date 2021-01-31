@@ -78,7 +78,7 @@ session_start();
           <div class="content">
             <h3>One of us ?</h3>
             <p>
-             Hop in member, we missed you
+             Hop in member!!!, we missed you
             </p>
 			<form  method = "post">
             <a class="btn transparent sign" id="sign-in-btn" href="login.php">Login</a><br><br>

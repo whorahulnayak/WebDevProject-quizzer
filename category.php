@@ -132,7 +132,7 @@ session_start();
                 <p>Movies</p>
             </a>
         </div>
-        
+      
         <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
 
             <a href="#" class="cardn yellow">
