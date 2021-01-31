@@ -59,6 +59,21 @@ body {
 	margin-bottom: 50px;
 	color: white;
 }
+.cardx {
+	width: 100%;
+
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	box-shadow: 0 14px 26px rgba(0, 0, 0, 0.04);
+	transition: all 0.3s ease-out;
+	text-decoration: none;
+	margin-bottom: 50px;
+}
 
 .cardn:hover {
 	transform: scale(1.005) translateZ(0);
@@ -250,4 +265,8 @@ h3 {
 .leaderboard-results tbody tr span {
 	background: #262626;
 	color: #747474;
+}
+
+.class-svg {
+	width: 40px;
 }
