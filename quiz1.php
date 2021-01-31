@@ -79,7 +79,6 @@ session_start();
 
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="category.php">Home</a>
-
                 <a class="nav-item nav-link active" href="leaderboard.php">Leaderboard</a>
                 <a class="nav-item nav-link active" href="rules.html">Rules</a>
                 <a class="nav-item nav-link active" href="aboutUS.html">About Us</a>
@@ -101,16 +100,16 @@ session_start();
             </div>
             <br />
             <div id='quiz'></div>
-            <div  id='next'><a class="btn btn-primary" href='#'>Next</a></div>
-            <div  id='prev'><a class="btn btn-warning"href='#'>Prev</a></div>
-           
+            <div id='next'><a class="btn btn-primary" href='#'>Next</a></div>
+            <div id='prev'><a class="btn btn-warning" href='#'>Prev</a></div>
+
             <!-- <button class='' id='next'>Next</a></button>
 			utton class='' id='prev'>Prev</a></button>
 			utton class='' id='start'> Start Over</a></button> -->
             <form action="" method="post">
                 <input type="text" name="q1_score" id="">
-				<input type="submit" value="submit">
-				<div  id='start'> <a class="btn btn-success"href='#'>Start Over</a> </div>
+                <input type="submit" value="submit">
+                <div id='start'> <a class="btn btn-success" href='#'>Start Over</a> </div>
             </form>
         </div>
     </div>

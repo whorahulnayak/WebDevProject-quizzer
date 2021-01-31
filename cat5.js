@@ -1,32 +1,38 @@
 (function() {
 	var questions = [
 		{
-			question: 'Which was the 1st non Test playing country to beat India in an international match?',
-			choices: [ 'Canada', 'Zimbawe', 'Sri Lanka', 'East Africe', 'Afghanistan' ],
+			question: 'What movie won the first Oscar for the new category of Best Animated Feature Film?',
+			choices: [
+				'The Incredibles (2004)',
+				'WALL-E (2008)',
+				'Shrek (2001)',
+				'Toy Story (1995)',
+				'Ice Age (2002)'
+			],
 			correctAnswer: 2
 		},
 		{
-			question: "Who broke Football Legend Pele's record for Most career goals?",
-			choices: [ 'Luis Suarez', 'Cristiano Ronaldo', 'Lionel Messi', 'Zlatan Ibrahimovic', 'Wayne Rooney' ],
-			correctAnswer: 1
-		},
-		{
-			question: 'Who is the first Indian woman to win an Asian Games gold in 400m run?',
-			choices: [ 'M.L.Valsamma', 'P.T.Usha', 'Kamaljit Sandhu', 'K.Malleshwari', 'Dutee Chand' ],
-			correctAnswer: 2
-		},
-		{
-			question: 'Which team has never won the IPL?',
-			choices: [ 'CSK', 'RCB', 'KKR', 'RR', 'SRH' ],
-			correctAnswer: 1
-		},
-		{
-			question: 'Which Cricketer has the record for most runs in an IPL season?',
-			choices: [ 'Aaron Finch', 'Chris Gayle', 'David Warner', 'Virat Kohli', 'Shikhar Dhawan' ],
+			question: 'For which of these movies did Leonardo DiCaprio win an Oscar for Best Actor?',
+			choices: [ 'Titanic', 'Inception', 'The Wolf of Wall Street', 'The Revenant', 'Blood Diamond' ],
 			correctAnswer: 3
+		},
+		{
+			question: 'Who perfroms the most on-screen kills in the Lord of The Rings movies?',
+			choices: [ 'Gimli', 'Legolas', 'Boromir', 'Frodo', 'Aragorn' ],
+			correctAnswer: 1
+		},
+		{
+			question: 'How many Oscars did the 1994 movie Forrest Gump win?',
+			choices: [ 2, 4, 3, 9, 6 ],
+			correctAnswer: 4
+		},
+		{
+			question: 'What are the claws of Wolverine made of?',
+			choices: [ 'Titanium', 'Vibranium', 'Adamantium', 'Cadmium', 'Osmium' ],
+			correctAnswer: 2
 		}
 	];
-
+	// quiz4
 	var questionCounter = 0; //Tracks question number
 	var selections = []; //Array containing user choices
 	var quiz = $('#quiz'); //Quiz div object
