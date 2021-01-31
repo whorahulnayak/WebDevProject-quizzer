@@ -5,8 +5,8 @@ session_start();
 	include("connection.php");
 	include("functions.php");
 
-	$user_data = check_login($con);
-
+    $user_data = check_login($con);
+    $username = $user_data['user_name'];
 ?>
 <html lang="en">
 <head>
@@ -115,19 +115,23 @@ session_start();
                         <tr>
                             <th>Ranking</th>
                             <th>Name</th>
-                            <th>Position</th>
+                            <th>Total points</th>
                         </tr>
                     </thead>
                     <tr>
                     <?php 
                         $con = mysqli_connect("localhost",  
                             "root", "", "login_sample_db"); 
-                    
+                        $username = $user_data['user_name'];
                         /* Mysqli query to fetch rows  
                         in descending order of marks */
-                        $result = mysqli_query($con, "SELECT user_name,  
-                        cat1_score FROM users ORDER BY cat1_score DESC"); 
-                        
+                        // $query = "SELECT user_name,t1_score,cat2_score,cat3_score,(cat1_score+cat2_score+cat3_score) as tot_score FROM users ";
+                        // mysqli_query($con, $query);
+
+                        // $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,  
+                        // tot_score FROM users ORDER BY tot_score DESC"); 
+                          $result = mysqli_query($con, "SELECT user_name,cat1_score,cat2_score,cat3_score,cat4_score, 
+                            tot_score FROM users ORDER BY tot_score DESC"); 
                         /* First rank will be 1 and  
                             second be 2 and so on */
                         $ranking = 1; 
@@ -135,13 +139,25 @@ session_start();
                         /* Fetch Rows from the SQL query */
                         if (mysqli_num_rows($result)) { 
                             while ($row = mysqli_fetch_array($result)) { 
-                                echo "<tr>
-                                <td>{$ranking}</td> 
-                                <td>{$row['user_name']}</td> 
-                                <td>{$row['cat1_score']}</td> <br> </tr>"; 
-                                $ranking++; 
+                                $row['tot_score'] = $row['cat1_score'] + $row['cat2_score'] + $row['cat3_score'] + $row['cat4_score'];
+                                $name = $row['user_name'];
+                                $score = $row['tot_score'];
+                                $query1 = "UPDATE users SET tot_score = '$score' where user_name = '$name'";
+                                mysqli_query($con, $query1);
+                               
                             } 
                     } 
+                    $result = mysqli_query($con, "SELECT user_name,tot_score FROM users ORDER BY tot_score DESC"); 
+                    if (mysqli_num_rows($result)) { 
+                        while ($row = mysqli_fetch_array($result)) { 
+                           
+                            echo "<tr>
+                            <td>{$ranking}</td> 
+                            <td>{$row['user_name']}</td> 
+                            <td>{$row['tot_score']}</td> <br> </tr>"; 
+                            $ranking++; 
+                        } 
+                } 
                     ?>
                         <!-- <td>Username</td>
                         <td>1</td> -->
@@ -154,29 +170,6 @@ session_start();
         </div>
 
     </div>
-    <?php 
-    $con = mysqli_connect("localhost",  
-        "root", "", "login_sample_db"); 
-  
-    /* Mysqli query to fetch rows  
-    in descending order of marks */
-    $result = mysqli_query($con, "SELECT user_name,  
-    cat1_score FROM users ORDER BY cat1_score DESC"); 
-    
-    /* First rank will be 1 and  
-        second be 2 and so on */
-    $ranking = 1; 
-    
-    /* Fetch Rows from the SQL query */
-    if (mysqli_num_rows($result)) { 
-        while ($row = mysqli_fetch_array($result)) { 
-            echo "<td>{$ranking}</td> 
-            <td>{$row['user_name']}</td> 
-            <td>{$row['cat1_score']}</td> <br>"; 
-            $ranking++; 
-        } 
-} 
-?>
 
 
 
