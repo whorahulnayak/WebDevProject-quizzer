@@ -87,10 +87,10 @@
       id: 'question'
     });
     
-    var header = $('<h2>Question ' + (index + 1) + ':</h2>');
+    var header = $('<h1 class="question">Question ' + (index + 1) + ':</h1>');
     qElement.append(header);
     
-    var question = $('<p>').append(questions[index].question);
+    var question = $('<h2>').append(questions[index].question);
     qElement.append(question);
     
     var radioButtons = createRadios(index);
@@ -105,7 +105,7 @@
     var item;
     var input = '';
     for (var i = 0; i < questions[index].choices.length; i++) {
-      item = $('<li>');
+      item = $('<li class="choice-container">');
       input = '<input type="radio" name="answer" value=' + i + ' />';
       input += questions[index].choices[i];
       item.append(input);
@@ -152,7 +152,7 @@
   
   // Computes score and returns a paragraph element to be displayed
   function displayScore() {
-    var score = $('<p>',{id: 'question'});//not needed at the moment
+    var score = $('<h3>',{id: 'question'});//not needed at the moment
     
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {

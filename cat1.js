@@ -101,7 +101,7 @@
 			id: 'question'
 		});
 
-		var header = $('<h1>Question ' + (index + 1) + ':</h1>');
+		var header = $('<h1 class="question">Question ' + (index + 1) + ':</h1>');
 		qElement.append(header);
 
 		var question = $('<h2 >').append(questions[index].question);
@@ -119,7 +119,7 @@
 		var item;
 		var input = '';
 		for (var i = 0; i < questions[index].choices.length; i++) {
-			item = $('<li class="choice-container" >');
+			item = $('<li class="choice-container">');
 			input = '<input type="radio" name="answer" value=' + i + ' />';
 			input += questions[index].choices[i];
 			item.append(input);

@@ -97,24 +97,26 @@ session_start();
 </nav>
 <!-- End of Nav Bar -->
 
-		<div id='container'>
-			<div id='title'>
-				<h1>Let's Get Quizzing</h1>
-			</div>
-   			<br/>
-              <div id='quiz'></div>
-    		<div class='button' id='next'><a href='#'>Next</a></div>
-    		<div class='button' id='prev'><a href='#'>Prev</a></div>
-    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
-    		<!-- <button class='' id='next'>Next</a></button>
-    		<button class='' id='prev'>Prev</a></button>
-    		<button class='' id='start'> Start Over</a></button> -->
-			<form action="" method="post">
-			
-				<input type="text" name="q2_score" id="">
+		<div id='container' class="container-fluid row mx-auto justify-content-center">
+        <div class="col-sm-11 col-md-10 col-lg-6">
+            <div id='title'>
+                <h1 class="quiz-title">Let's Get YOOOO Quizzing</h1>
+            </div>
+            <br />
+            <div id='quiz'></div>
+            <div  id='next'><a class="btn btn-primary" href='#'>Next</a></div>
+            <div  id='prev'><a class="btn btn-warning"href='#'>Prev</a></div>
+           
+            <!-- <button class='' id='next'>Next</a></button>
+			utton class='' id='prev'>Prev</a></button>
+			utton class='' id='start'> Start Over</a></button> -->
+            <form action="" method="post">
+                <input type="text" name="q2_score" id="">
 				<input type="submit" value="submit">
-			</form>
-    	</div>
+				<div  id='start'> <a class="btn btn-success"href='#'>Start Over</a> </div>
+            </form>
+        </div>
+    </div>
 
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
         <!-- <script type="text/javascript" src='questions.json'></script> -->

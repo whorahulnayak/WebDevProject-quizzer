@@ -53,7 +53,7 @@ session_start();
 
             <div class="navbar-nav">
                 <a class="nav-item nav-link" href="category.php">Home</a>
-                <a class="nav-item nav-link active" href="#">Leaderboard</a>
+                <a class="nav-item nav-link active" href="leaderboard.php">Leaderboard</a>
                 <a class="nav-item nav-link" href="rules.html">Rules</a>
                 <a class="nav-item nav-link" href="aboutUS.html">About Us</a>
             </div>
@@ -152,7 +152,7 @@ session_start();
                             echo "<tr>
                             <td>{$ranking}</td> 
                             <td>{$row['user_name']}</td> 
-                            <td>{$row['tot_score']}</td> </tr>"; 
+                            <td>{$row['tot_score']}</td></tr>"; 
                             $ranking++; 
                         } 
                 } 
