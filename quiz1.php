@@ -58,7 +58,7 @@ session_start();
 
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
         <!-- <script type="text/javascript" src='questions.json'></script> -->
-        <script type='text/javascript' src="quiz1.js"></script>
+        <script type='text/javascript' src="cat1.js"></script>
          
 	</body>
 </html>
