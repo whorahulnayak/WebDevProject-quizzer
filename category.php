@@ -57,7 +57,7 @@ session_start();
 <div class="navbar-nav">
     <a class="nav-item nav-link active" href="#">Home</a>
     <a class="nav-item nav-link active" href="#">Categories</a>
-    <a class="nav-item nav-link active" href="#">Leaderboard</a>
+    <a class="nav-item nav-link active" href="leaderboard.php">Leaderboard</a>
     <a class="nav-item nav-link active" href="rules.html">Rules</a>
     <a class="nav-item nav-link active" href="aboutUS.html">About Us</a>
   </div>

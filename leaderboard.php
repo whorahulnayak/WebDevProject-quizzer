@@ -44,10 +44,10 @@
         <div class="collapse navbar-collapse " id="expandme">
 
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="#">Home</a>
+                <a class="nav-item nav-link" href="category.php">Home</a>
                 <a class="nav-item nav-link active" href="#">Leaderboard</a>
-                <a class="nav-item nav-link" href="#">Rules</a>
-                <a class="nav-item nav-link" href="#">About Us</a>
+                <a class="nav-item nav-link" href="rules.html">Rules</a>
+                <a class="nav-item nav-link" href="aboutUS.html">About Us</a>
             </div>
 
 
