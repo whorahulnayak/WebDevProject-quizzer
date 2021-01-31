@@ -19,7 +19,7 @@ session_start();
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="hamburgers.css">
     <link rel="stylesheet" href="leaderboard.css">
 
@@ -57,7 +57,9 @@ session_start();
                 <a class="nav-item nav-link" href="rules.html">Rules</a>
                 <a class="nav-item nav-link" href="aboutUS.html">About Us</a>
             </div>
-
+            <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+            </div>
 
 
         </div>
