@@ -139,9 +139,8 @@
           $('#prev').hide();
           $('#next').show();
         }
-        var scoreElem;
       }else {
-     scoreElem = displayScore();
+      var scoreElem = displayScore();
         quiz.append(scoreElem).fadeIn();
         $('#next').hide();
         $('#prev').hide();
@@ -152,7 +151,7 @@
   
   // Computes score and returns a paragraph element to be displayed
   function displayScore() {
-    var score = $('<p>',{id: 'question'});//not needed at the moment
+    var score = $('<p>',{id: 'question'});
     
     var numCorrect = 0;
     for (var i = 0; i < selections.length; i++) {
