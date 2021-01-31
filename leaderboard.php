@@ -152,7 +152,7 @@ session_start();
                             echo "<tr>
                             <td>{$ranking}</td> 
                             <td>{$row['user_name']}</td> 
-                            <td>{$row['tot_score']}</td> <br> </tr>"; 
+                            <td>{$row['tot_score']}</td> </tr>"; 
                             $ranking++; 
                         } 
                 } 
