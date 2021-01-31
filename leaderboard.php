@@ -60,7 +60,7 @@ session_start();
             <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link active "href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
             </div>
-
+<!-- check code -->
 
         </div>
     </nav>
