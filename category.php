@@ -56,7 +56,7 @@ session_start();
 
 <div class="navbar-nav">
     <a class="nav-item nav-link active" href="#">Home</a>
-    <a class="nav-item nav-link active" href="#">Categories</a>
+    <!-- <a class="nav-item nav-link active" href="#">Categories</a> -->
     <a class="nav-item nav-link active" href="leaderboard.php">Leaderboard</a>
     <a class="nav-item nav-link active" href="rules.html">Rules</a>
     <a class="nav-item nav-link active" href="aboutUS.html">About Us</a>
@@ -126,7 +126,7 @@ session_start();
       
       <!-- 4 -->
       <div class="col-sm-6 col-lg-4 col-xl-3 parent2">
-        <a href="#" class="cardn blue">
+        <a href="quiz4.php" class="cardn blue">
              <div class="overlay"></div>
           <div class="circle">
           </div>
