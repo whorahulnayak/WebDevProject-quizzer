@@ -105,7 +105,7 @@ session_start();
     <div id='container' class="container-fluid row mx-auto justify-content-center">
         <div class="col-sm-11 col-md-10 col-lg-6">
             <div id='title'>
-                <h1 class="quiz-title">Let's Get YOOOO Quizzing</h1>
+                <h1 class="quiz-title">Data Structures Quiz</h1>
             </div>
             <br />
             <div id='quiz'></div>
